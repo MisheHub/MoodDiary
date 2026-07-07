@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+  <meta charset="UTF-8">
+  <title>Mood Diary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>💜 Mood Diary</h1>
+    <p class="subtitle">☀️🌙 Следи го твоето расположение секој ден</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Како се чувствуваш денес?</h2>
+      <form id="moodForm">
+        <select id="moodSelect">
+          <option value="Среќен">😊 Среќен</option>
+          <option value="Тажен">😢 Тажен</option>
+          <option value="Анксиозен">😟 Анксиозен</option>
+          <option value="Енергичен">⚡ Енергичен</option>
+        </select>
+        <input type="text" id="note" placeholder="Твој коментар...">
+        <button type="submit">Зачувај</button>
+      </form>
+    </section>
+
+    <div class="flex-container">
+      <section class="card half">
+        <h2>Историја на расположенија</h2>
+        <ul id="moodList"></ul>
+      </section>
+
+      <section class="card half">
+        <h2>График на расположенија</h2>
+        <canvas id="moodChart"></canvas>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>💚 Mood Diary • Изработено за ПНУВ</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
